@@ -44,6 +44,11 @@ INSTALLED_APPS = [
     'django_filters',
     'djoser',
 
+    'apps.category',
+    'apps.review',
+    'apps.order',
+    'apps.product'
+
 ]
 
 MIDDLEWARE = [
