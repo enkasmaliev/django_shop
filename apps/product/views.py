@@ -5,7 +5,7 @@ from .serializers import ProductSerializer
 from .permissions import IsOwner
 
 
-class ProductView(viewsets.ModelViewSet):
+class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 

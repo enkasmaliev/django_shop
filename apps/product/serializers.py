@@ -21,7 +21,8 @@ class ProductListSerializer(serializers.ListSerializer):
 class ProductSerializer(serializers.ModelSerializer):
     imgs = serializers.ListField(
         child=serializers.ImageField(),
-        write_only=True
+        write_only=True,
+        required=False
     )
 
     class Meta:
