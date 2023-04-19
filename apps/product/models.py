@@ -14,7 +14,7 @@ class Product(models.Model):
         User, on_delete=models.CASCADE, related_name='products')
     price = models.DecimalField(max_digits=10, decimal_places=2)
     description = models.TextField(blank=True)
-    main_image = models.ImageField(upload_to='images')
+    main_image = models.ImageField(upload_to='images', default='bookshop.jpg')
     category = models.ForeignKey(
         'category.Category', on_delete=models.SET_NULL, null=True, related_name='products')
     created_at = models.DateTimeField(auto_now_add=True)
